@@ -39,6 +39,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:text="Created By:-"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -63,7 +64,7 @@
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="85dp"
         android:text="RAJDEEP KAUR-----C0231451"
         android:textAlignment="center"
         android:textSize="30sp" />
