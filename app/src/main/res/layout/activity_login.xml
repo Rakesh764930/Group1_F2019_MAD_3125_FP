@@ -35,7 +35,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editUsername"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -45,7 +45,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -55,7 +55,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:layout_width="200dp"
         android:layout_gravity="right"
         android:layout_height="wrap_content"
