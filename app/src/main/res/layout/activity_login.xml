@@ -36,8 +36,9 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="right"
         android:ems="10"
         android:hint="Enter Username"
         android:inputType="textPersonName"
@@ -45,10 +46,12 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="right"
         android:ems="10"
         android:hint="Enter Password"
+        android:textSize="24sp"
         android:inputType="textPassword" />
 
     <Button
