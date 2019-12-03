@@ -18,6 +18,8 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+
         android:text="Login Please"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -26,28 +28,49 @@
         android:id="@+id/edtUsername"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:drawableLeft="@drawable/user"
         android:ems="10"
-        android:hint="enter username"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:text="user@employee.com" />
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/key"
         android:ems="10"
-        android:hint="enter password"
-        android:inputType="textPassword" />
+        android:inputType="textPersonName"
+        android:text="s3cr3t" />
 
-    <Switch
-        android:id="@+id/swRememberMe"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Switch" />
+        android:layout_height="wrap_content">
+
+        <Switch
+            android:id="@+id/swRememberMe"
+            android:layout_width="48dp"
+            android:layout_height="16dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="viewEnd"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:text="Remember Me" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="200dp"
         android:layout_gravity="right"
+        android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
         android:text="Login" />
 </LinearLayout>

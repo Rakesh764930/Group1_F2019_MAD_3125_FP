@@ -34,33 +34,34 @@ btnLogin.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 
-        if (edtUsername.getText().toString().contentEquals("Rks764930") && edtPassword.getText().toString().contentEquals("4141")){
-            Intent nintent=new Intent(LoginActivity.this,SplashActivity.class);
+        if (edtUsername.getText().toString().trim().equals("user@employee.com") && edtPassword.getText().toString().trim().equals("s3cr3t")){
+            Intent nintent=new Intent(LoginActivity.this,ThirdActivity.class);
             //   nintent.putExtra("name",edtUsername.getText().toString());
             startActivity(nintent);
         }
         else{
+            btnLogin.setAlpha(.5f);
             edtUsername.setError("Please enter Name");
-            //showAlert();
+            showAlert();
 
         }
 
-    }
+   }
 });
-        swRememberMe.setOnCheckedChangeListener(new  CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean b) {
-                if(b){
-                    txtColor.setBackgroundColor(Color.YELLOW);
-                    txtColor.setTextColor(Color.BLUE);
-                }
-                else
-                {
-                    txtColor.setBackgroundColor(Color.BLACK);
-                    txtColor.setTextColor(Color.RED);
-                }
-            }
-        });
+//        swRememberMe.setOnCheckedChangeListener(new  CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean b) {
+//                if(b){
+//                    txtColor.setBackgroundColor(Color.YELLOW);
+//                    txtColor.setTextColor(Color.BLUE);
+//                }
+//                else
+//                {
+//                    txtColor.setBackgroundColor(Color.BLACK);
+//                    txtColor.setTextColor(Color.RED);
+//                }
+//            }
+//        });
 
 }  public void showAlert()
     {
