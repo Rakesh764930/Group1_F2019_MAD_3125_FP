@@ -21,38 +21,28 @@
         android:text="Login Please"
         android:textAlignment="center"
         android:textSize="30sp" />
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:id="@+id/loginTextInputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Login"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
-        android:id="@+id/editUsername"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:ems="10"
-        android:hint="Enter Username"
-        android:inputType="textPersonName"
-        android:textSize="24sp" />
+        android:hint="enter username"
+        android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/editPassword"
-        android:layout_width="300dp"
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
         android:ems="10"
-        android:hint="Enter Password"
-        android:textSize="24sp"
+        android:hint="enter password"
         android:inputType="textPassword" />
+
+    <Switch
+        android:id="@+id/swRememberMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch" />
 
     <Button
         android:id="@+id/btnLogin"
