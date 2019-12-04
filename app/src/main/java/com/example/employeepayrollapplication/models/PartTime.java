@@ -2,7 +2,7 @@ package com.example.employeepayrollapplication.models;
 
 import com.example.employeepayrollapplication.models.Employee;
 
-public class PartTime extends Employee {
+public class PartTime  extends Employee {
 
     //V a r i a b l e   D e c l a r a t i o n
 
