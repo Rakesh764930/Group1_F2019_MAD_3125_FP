@@ -13,6 +13,6 @@ public class FullTIme extends Employee {
     Double calcEarnings() {
 double earnigs;
         super.earnings = salary + bonus;
-        return super.earnings;
+        return  super.earnings;
     }
 }
