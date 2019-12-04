@@ -18,7 +18,7 @@ public class Intern extends Employee {
         this.schoolName = schoolName;
     }
 
-    //O v e r r i d i n g
+
 
 
 }
