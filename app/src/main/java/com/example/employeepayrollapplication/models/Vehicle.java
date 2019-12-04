@@ -14,7 +14,7 @@ public abstract class Vehicle {
     }
 
     public String getPlate() {
-        return Plate;
+        return  Plate;
     }
 
     public void setPlate(String plate) {
