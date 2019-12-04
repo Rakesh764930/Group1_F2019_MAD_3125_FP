@@ -1,7 +1,7 @@
 package com.example.employeepayrollapplication.models;
 public class MotorCycle extends Vehicle  {
     // Motorcycle's Additional variable
-    private String brand;
+    private String  brand;
     private double price;
 
     public MotorCycle(int make, String plate, String brand, double price) {
