@@ -19,7 +19,7 @@ public  class Employee{
 
         Date date = new Date();
         int currYear = Calendar.getInstance().get(Calendar.YEAR);
-        if(age == 0)
+        if(age  == 0)
         {
             System.out.println("Age not found!");
         }
