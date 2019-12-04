@@ -1,5 +1,5 @@
 package com.example.employeepayrollapplication.models;
-public abstract class Vehicle {
+public class Vehicle {
     // Variable Declaration
     private  int Make;
     private String Plate;
