@@ -41,7 +41,7 @@ btnLogin.setOnClickListener(new View.OnClickListener() {
         }
         else{
             btnLogin.setAlpha(.5f);
-            edtUsername.setError("Please enter Name");
+            edtUsername.setError("Please enter valid email or password");
             showAlert();
 
         }
@@ -68,7 +68,7 @@ btnLogin.setOnClickListener(new View.OnClickListener() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setIcon(R.drawable.bb8);
         alertDialogBuilder.setTitle("Login error");
-        alertDialogBuilder.setMessage("Please enter your name");
+
 
         alertDialogBuilder.setNegativeButtonIcon(getResources().getDrawable(R.drawable.bb8));
         AlertDialog mAlertDialog=alertDialogBuilder.create();
