@@ -5,7 +5,7 @@ public class Vehicle {
  String plate;
  String type;
 
-    public Vehicle(int make, String plate, String type) {
+    public Vehicle(String make, String plate, int type) {
         this.make = make;
         this.plate = plate;
         this.type = type;
