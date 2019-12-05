@@ -16,6 +16,8 @@ public class Car extends Vehicle {
         NumberOfSeats = numberOfSeat;
     }
 
+
+
 // Getters and setters
 
 

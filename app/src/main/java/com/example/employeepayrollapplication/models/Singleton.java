@@ -2,6 +2,7 @@ package com.example.employeepayrollapplication.models;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.util.
 
 public class Singleton{
 
@@ -39,11 +40,11 @@ public class Singleton{
             emp_dict.put(id,e);
         }
         //funtion to create customer objects and add using above function
-       pub alreadyEmployee() {
+       public void  alreadyEmployee() {
         // Employee 1
 
-        let f1 = FullTime(id:1, name: "Ajeet Singh", age: 22, bonus: 250, salary: 25000,type: "FullTime")
-        let c1 = Car(brand: "Ferrari", numberOfSeats: 2, make: 2019, plate: "LVE142",type: "Car")
+           FullTime f1 = new FullTime(1,"Ajeet Singh",22,250,25000,"FullTime");
+        Car = new Car( "Ferrari",  2, 2019, "LVE142", "Car");
         f1.addVehicle(v: c1)
         let m1 = Motorcycle(model: "Ducati", type: "Motorcycle", plate: "LFM421", make: 2019)
         f1.addVehicle(v: m1)

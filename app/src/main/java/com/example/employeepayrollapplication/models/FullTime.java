@@ -2,7 +2,7 @@ package com.example.employeepayrollapplication.models;
 
 import com.example.employeepayrollapplication.models.Employee;
 
-public class FullTIme extends Employee {
+public class FullTime extends Employee {
 
     //V a r i a b l e     d e c l a r a t i o n
     Double salary;
@@ -11,11 +11,12 @@ public class FullTIme extends Employee {
 
     //Overwriting method of parent class
 
-    public FullTIme(int id, String name, int age, double earnings, int birthYear, Double salary, Double bonus) {
+    public FullTime(int id, String name, int age, double earnings, int birthYear, Double salary, Double bonus) {
         super(id, name, age, earnings, birthYear);
         this.salary = salary;
         this.bonus = bonus;
     }
+
 
     Double calcEarnings() {
 double earnigs;
