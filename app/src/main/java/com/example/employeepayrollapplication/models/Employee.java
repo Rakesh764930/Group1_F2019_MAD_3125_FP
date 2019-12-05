@@ -6,11 +6,19 @@ import java.util.Date;
 public  class Employee{
 
     //V a r i a b l e s    d e c l a r a t i o n
-
+private int id;
     private String name = "";
     private int age;
  double earnings;
     private int birthYear = 0 ;
+
+    public Employee(int id, String name, int age, double earnings, int birthYear) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.earnings = earnings;
+        this.birthYear = birthYear;
+    }
 
 
     //M e t h o d s    d e c l a r a t i o n
@@ -40,6 +48,14 @@ public  class Employee{
 
     //A d d e d   G e t t  e r   a n d   S e t t e r
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

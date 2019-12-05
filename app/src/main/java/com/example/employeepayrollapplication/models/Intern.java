@@ -3,6 +3,10 @@ package com.example.employeepayrollapplication.models;
 import com.example.employeepayrollapplication.models.Employee;
 
 public class Intern extends Employee {
+    public Intern(int id, String name, int age, double earnings, int birthYear, String schoolName) {
+        super(id, name, age, earnings, birthYear);
+        this.schoolName = schoolName;
+    }
 
     //V a r i a b l e    D e c l a r a t  i o  n
 

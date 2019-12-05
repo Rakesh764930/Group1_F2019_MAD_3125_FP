@@ -8,7 +8,14 @@ public class FullTIme extends Employee {
     Double salary;
     Double bonus;
 
+
     //Overwriting method of parent class
+
+    public FullTIme(int id, String name, int age, double earnings, int birthYear, Double salary, Double bonus) {
+        super(id, name, age, earnings, birthYear);
+        this.salary = salary;
+        this.bonus = bonus;
+    }
 
     Double calcEarnings() {
 double earnigs;
