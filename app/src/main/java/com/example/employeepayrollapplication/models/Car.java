@@ -4,39 +4,30 @@ public class Car extends Vehicle {
 
     // Car's Additional Variable
 
-    private String  color;
+    private String  brand;
     private int NumberOfSeats;
-    private int make;
-    private String plate;
 
-    public Car(int make, String plate, String color, int numberOfSeat) {
-        this.make = make;
-        this.plate = plate;
-        this.color = color;
-        NumberOfSeats = numberOfSeat;
+    public Car(int make, String plate, String brand, int numberOfSeats) {
+        super(make, plate);
+        this.brand = brand;
+        NumberOfSeats = numberOfSeats;
     }
-
-
-
 // Getters and setters
 
 
-    public String getColor() {
-        return color;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public int getNumberOfSeats() {
         return NumberOfSeats;
     }
 
-    public void setNumberOfSeats(byte numberOfSeats) {
+    public void setNumberOfSeats(int numberOfSeats) {
         NumberOfSeats = numberOfSeats;
     }
-
-
-
 }

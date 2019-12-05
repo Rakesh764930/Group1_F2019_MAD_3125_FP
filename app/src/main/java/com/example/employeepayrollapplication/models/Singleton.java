@@ -7,7 +7,7 @@ public class Singleton{
 
 
     Dictionary emp_dict = new Hashtable();
-    private static Singleton _instance;
+    private static Singleton instance;
 
         private Singleton()
         {
@@ -16,36 +16,37 @@ public class Singleton{
 
         public static Singleton getInstance1()
         {
-            if (_instance == null)
+            if (instance == null)
             {
-                _instance = new Singleton();
+                instance = new Singleton();
             }
-            return _instance;
+            return instance;
         }
 
 
 
         //function to add customer in dictionary
         public void  addEmployeeToDictionary(Employee e) {
-            emp_dict.put(id,e);
+            emp_dict.put(emp,e);
         }
         //funtion to create customer objects and add using above function
        public void  alreadyEmployee() {
         // Employee 1
 
-           FullTime f1 = new FullTime(1,"Ajeet Singh",22,250,25000,"FullTime");
-        Car = new Car( "Ferrari",  2, 2019, "LVE142", "Car");
-        f1.addVehicle(v: c1)
-        MotorCycle m1 = Motorcycle("Ducati",  "Motorcycle",  "LFM421",  2019);
-        f1.addVehicle(v: m1)
+           FullTime f1=new FullTime(1,"Rakesh",21,2000,2019,200,200,FullTime);
+      //Car c1=new Car(1998,"lvl123","Ducati",2);
+           //f1.addVehicle(v: c1)
+//MotorCycle m1=new MotorCycle(1,"Hayabhusa","lald");
+           //f1.addVehicle(v: m1)
 
-        // Customer 2
-           FixedBasedPartTime p1 = new FixedBasedPartTime(id:2, fixedAmount: 500, rate: 10, hoursWorked: 40, name: "Rakesh Kumar", age: 22, type: "Fixed Based PartTime")
-       Car c2 = new Car("Ferrari",  2,  2019,  "LVE142", "Car");
-        p1.addVehicle(v: c2)
+           // Customer 2
 
-        addEmployeeToDictionary(e: f1)
-        addEmployeeToDictionary(e: p1)
+FixedBasedPartTime f2=new FixedBasedPartTime(12,"Ajeet",21,2344,2019,1234,12,133);           let c2 = Car(brand: "Ferrari", numberOfSeats: 2, make: 2019, plate: "LVE142",type: "Car")
+         //  p1.addVehicle(v: c2)
+
+           addEmployeeToDictionary(e: f1)
+           addEmployeeToDictionary(e: p1)
+
         }
 
         //funtion to add customer
@@ -66,14 +67,17 @@ public class Singleton{
         //Return Customer Object
         public Employee returnEmpObj(int empId)
         {
-        for(key,value) in empDict
-        {
-        if key==empId
-        {
-        return value
-        }
-        }
-        return nil
-        }
+           int id=empId;
+           for(int key)
+        if id==
+//            emp_dict.forEach((k, v) -> emp_dict.put(k, v));
+//        {
+//        if key==empId
+//        {
+//        return value
+//        }
+//        }
+//        return nil
+//        }
 
         }
