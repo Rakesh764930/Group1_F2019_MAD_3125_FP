@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7B5E12EB"
+    android:background="?attr/colorBackgroundFloating"
     android:orientation="vertical"
     tools:context=".SplashActivity">
 
@@ -14,7 +14,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/bb8"
+        android:src="@drawable/payroll"
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="0dp" />
 
@@ -23,8 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Employee Payroll Application"
+        android:layout_marginBottom="20dp"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
@@ -34,7 +35,7 @@
         android:layout_marginBottom="50dp"
         android:text="Group2_F2019_MAD_3125_FP"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -43,7 +44,7 @@
         android:layout_marginBottom="40dp"
         android:text="Created By:-"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
@@ -52,7 +53,7 @@
         android:layout_height="wrap_content"
         android:text="RAKESH KUMAR-----C0764930"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -60,7 +61,7 @@
         android:layout_height="wrap_content"
         android:text="AJEET SINGH-----C0763441"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView6"
@@ -68,5 +69,5 @@
         android:layout_height="85dp"
         android:text="RAJDEEP KAUR-----C0766256"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
 </LinearLayout>
