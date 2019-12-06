@@ -31,7 +31,7 @@
         android:id="@+id/edtUsername"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="20dp"
         android:drawableLeft="@drawable/user"
         android:ems="10"
         android:inputType="textPersonName"
@@ -41,7 +41,7 @@
         android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="20dp"
         android:drawableLeft="@drawable/key"
         android:ems="10"
         android:inputType="textPersonName"
@@ -72,9 +72,11 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/holo_blue_light"
         android:text="Login"
         android:textColor="@color/colorAccent" />
 </LinearLayout>
