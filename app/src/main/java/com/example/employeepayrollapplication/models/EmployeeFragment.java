@@ -12,7 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.employeepayrollapplication.R;
 
 import java.util.ArrayList;
 
@@ -32,23 +35,23 @@ public class EmployeeFragment extends Fragment
         this.con = inflater.getContext();
         Log.e("***************","inside onCreateView");
 
-        View v =  inflater.inflate(R.layout.employee_fragment_layout, container, false);
+        View v =  inflater.inflate(R.layout.employee_list, container, false);
 
         
 
         employees_list = Singleton.getObj().getList();
 
         this.recyclerView = v.findViewById(R.id.recycler_view);
-        adapter = new CustomAdapterForRecyclerView(employees_list, this.con, new CustomAdapterForRecyclerView.SetCustomClickListener() {
+        adapter = new CustomAdapterForRecyclerView(employees_list, this.con, new CustomAdapterForRecyclerView. {
             @Override
-            public void customOnClick(Employee employee) {
+            public void emp_Object(Employee employee) {
                 Toast.makeText(EmployeeFragment.this.con, employee.getName(), Toast.LENGTH_LONG).show();
                 if(employeeDatailsFragment == null) {
                     employeeDatailsFragment = new EmployeeDatailsFragment();
                 }
-                employeeDatailsFragment.employeeObject(employee);
+                employeeDatailsFragment.emp_Object(employee);
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout , employeeDatailsFragment , "");
+                fragmentTransaction.replace(R.id.frame_layout ,employeeDatailsFragment, "");
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
 

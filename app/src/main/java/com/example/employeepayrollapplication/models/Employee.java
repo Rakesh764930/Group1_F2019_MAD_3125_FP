@@ -13,13 +13,13 @@ private int emp_id;
 
     private int birthYear = 0 ;
 
-    public Employee(int emp_id, String name, int age,  int birthYear,Vehicle vehicle) {
+    public Employee(int emp_id, String name, int age) {
         this.emp_id = emp_id;
         this.name = name;
         this.age = age;
-        this.vehicle=vehicle;
 
-        this.birthYear = birthYear;
+
+
     }
 
 
@@ -41,7 +41,7 @@ private int emp_id;
         return birthYear;
     }
 
-     double calcEarning(){
+     public double calcEarning(){
 
         return 1000.00;
     }

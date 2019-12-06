@@ -4,12 +4,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +60,7 @@ public class EmployeeListFragment extends Fragment {
                 if(employeeDatailsFragment == null) {
                     employeeDatailsFragment = new EmployeeDatailsFragment();
                 }
-                employeeDatailsFragment.employeeObject(employee);
+                employeeDatailsFragment.emp_Object(employee);
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frame_layout , employeeDatailsFragment , "");
                 fragmentTransaction.commit();
@@ -71,6 +68,7 @@ public class EmployeeListFragment extends Fragment {
 
             }
         });
+
         this.recyclerView.setAdapter(adapter);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this.con));
 
@@ -84,7 +82,6 @@ public class EmployeeListFragment extends Fragment {
 
 
     }
-
     @Override
     public void onAttach(Context context) {
 
