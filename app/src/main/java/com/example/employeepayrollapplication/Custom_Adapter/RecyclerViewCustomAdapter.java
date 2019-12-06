@@ -8,8 +8,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.employeepayrollapplication.R;
+import com.example.employeepayrollapplication.models.Employee;
 
 public class RecyclerViewCustomAdapter extends RecyclerView.Adapter {
+
+    public interface SetCustomClickListener{
+        public  void customOnClick(Employee e);
+    }
 
 
     @NonNull
