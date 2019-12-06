@@ -10,6 +10,20 @@ class FixedBasedPartTime extends PartTime {
        this.FixedAmount = fixedAmount;
     }
 
+    //getter and setter
+    public void setFixedAmount(double fixedAmount) {
+        FixedAmount = fixedAmount;
+    }
+    public double getFixedAmount() {
+        return FixedAmount;
+    }
+
+    //calculating earnings
+
+    public double fixedAmountCalcEarnings()
+    {
+        return this.getFixedAmount()+(this.getHoursWorked()*this.getRate());
+    }
 
 
 }
