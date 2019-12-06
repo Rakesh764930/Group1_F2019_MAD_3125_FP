@@ -9,14 +9,16 @@ public  class Employee{
 private int emp_id;
     private String name = "";
     private int age;
- double earnings;
+    private Vehicle vehicle;
+
     private int birthYear = 0 ;
 
-    public Employee(int emp_id, String name, int age, double earnings, int birthYear) {
+    public Employee(int emp_id, String name, int age,  int birthYear,Vehicle vehicle) {
         this.emp_id = emp_id;
         this.name = name;
         this.age = age;
-        this.earnings = earnings;
+        this.vehicle=vehicle;
+
         this.birthYear = birthYear;
     }
 
@@ -39,7 +41,7 @@ private int emp_id;
         return birthYear;
     }
 
-     Double calcEarnings(){
+     double calcEarning(){
 
         return 1000.00;
     }
@@ -73,11 +75,5 @@ private int emp_id;
         this.age = age;
     }
 
-    public double getEarnings() {
-        return earnings;
-    }
 
-    public void setEarnings(double earnings) {
-        this.earnings = earnings;
-    }
 }

@@ -1,7 +1,6 @@
 package com.example.employeepayrollapplication.models;
 
 
-
     public  class Vehicle  {
         private String make;
         private String plate;
