@@ -2,32 +2,25 @@ package com.example.employeepayrollapplication.models;
 
 public class Car extends Vehicle {
 
-    // Car's Additional Variable
+    private String carmodelnumber;
 
-    private String  brand;
-    private int NumberOfSeats;
-
-    public Car(int make, String plate, String brand, int numberOfSeats) {
-        super(make, plate);
-        this.brand = brand;
-        NumberOfSeats = numberOfSeats;
-    }
-// Getters and setters
-
-
-    public String getBrand() {
-        return brand;
+    public Car(String carmodelnumber,String make, String plate, int mileage) {
+        super(make, plate, mileage);
+        this.carmodelnumber = carmodelnumber;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public String getCarmodelnumber() {
+        return carmodelnumber;
     }
 
-    public int getNumberOfSeats() {
-        return NumberOfSeats;
+    public void setCarmodelnumber(String carmodelnumber) {
+        this.carmodelnumber = carmodelnumber;
     }
 
-    public void setNumberOfSeats(int numberOfSeats) {
-        NumberOfSeats = numberOfSeats;
+    @Override
+    public String printData() {
+
+        return "\nEmployee has Car"+"\nMake : "+this.getMake()+"\nPlate : "+this.getPlate()+"\nCar Model : "+this.getCarmodelnumber()+"\n";
     }
+
 }
