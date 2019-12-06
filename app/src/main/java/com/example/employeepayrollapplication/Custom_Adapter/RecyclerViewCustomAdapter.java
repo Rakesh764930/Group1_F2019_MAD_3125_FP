@@ -15,13 +15,15 @@ import java.util.ArrayList;
 
 public class RecyclerViewCustomAdapter extends RecyclerView.Adapter {
 
+    ArrayList<Employee> arrayList;
+    SetCustomClickListener listener;
+
+
     public interface SetCustomClickListener{
         public void customOnClick(Employee e);
     }
 
-    ArrayList<Employee> arrayList;
-    Context context;
-    SetCustomClickListener listener;
+
 
 
     @NonNull
@@ -54,6 +56,11 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter {
             age = itemView.findViewById(R.id.emp_age);
 
         }
+
+        public void bindData(Employee e,  SetCustomClickListener listener) {
+            name.setText("Name : " + e.getName());
+        }
+
     }
 
 }
