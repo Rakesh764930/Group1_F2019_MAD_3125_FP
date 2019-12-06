@@ -3,8 +3,11 @@ package com.example.employeepayrollapplication.models;
 import com.example.employeepayrollapplication.models.Employee;
 
 public class Intern extends Employee {
-    public Intern(int emp_id, String name, int age, double earnings, int birthYear, String schoolName) {
-        super(emp_id, name, age, earnings, birthYear);
+
+    //constuctor
+
+    public Intern(int emp_id, String name, int age,  int birthYear, String schoolName,Vehicle vehicle) {
+        super(emp_id, name, age, birthYear,vehicle);
         this.schoolName = schoolName;
     }
 
@@ -12,7 +15,9 @@ public class Intern extends Employee {
 
     private String schoolName;
 
-    //G e t t e r   a n d    S e t t e r
+
+
+//G e t t e r   a n d    S e t t e r
 
     public String getSchoolName() {
         return schoolName;
