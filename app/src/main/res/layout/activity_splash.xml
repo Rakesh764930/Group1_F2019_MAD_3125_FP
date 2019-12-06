@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorBackgroundFloating"
+    android:background="?attr/colorButtonNormal"
     android:orientation="vertical"
     tools:context=".SplashActivity">
 
@@ -14,7 +14,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/payroll"
+        android:src="@drawable/pyrol2"
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="0dp" />
 
@@ -22,8 +22,8 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Employee Payroll Application"
         android:layout_marginBottom="20dp"
+        android:text="Employee Payroll Application"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -51,8 +51,8 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RAKESH KUMAR-----C0764930"
         android:layout_marginBottom="20dp"
+        android:text="RAKESH KUMAR-----C0764930"
         android:textAlignment="center"
         android:textSize="24sp" />
 
@@ -60,8 +60,8 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="AJEET SINGH-----C0763441"
         android:layout_marginBottom="20dp"
+        android:text="AJEET SINGH-----C0763441"
         android:textAlignment="center"
         android:textSize="24sp" />
 
