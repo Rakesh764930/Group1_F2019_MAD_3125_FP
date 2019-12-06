@@ -52,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RAKESH KUMAR-----C0764930"
+        android:layout_marginBottom="20dp"
         android:textAlignment="center"
         android:textSize="24sp" />
 
@@ -60,6 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="AJEET SINGH-----C0763441"
+        android:layout_marginBottom="20dp"
         android:textAlignment="center"
         android:textSize="24sp" />
 
