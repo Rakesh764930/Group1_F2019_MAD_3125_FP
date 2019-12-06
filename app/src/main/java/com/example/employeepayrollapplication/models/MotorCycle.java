@@ -12,18 +12,5 @@ public class MotorCycle extends Vehicle {
         this.model = model;
         this.mile_age = mile_age;
     }
-//Getters and setters
 
-    public String getModel() {
-        return model;
-    }
-    public void setModel(String model) {
-        this.model = model;
-    }
-    public int getMile_age() {
-        return mile_age;
-    }
-    public void setMile_age(int mile_age) {
-        this.mile_age = mile_age;
-    }
 }
