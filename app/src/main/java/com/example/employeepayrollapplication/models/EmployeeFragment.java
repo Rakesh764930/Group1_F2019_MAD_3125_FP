@@ -24,7 +24,8 @@ public class EmployeeFragment extends Fragment
     RecyclerView recyclerView;
     CustomAdapterForRecyclerView adapter;
 
-   
+    FragmentTransaction fragmentTransaction;
+    EmployeeDatailsFragment employeeDatailsFragment;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
