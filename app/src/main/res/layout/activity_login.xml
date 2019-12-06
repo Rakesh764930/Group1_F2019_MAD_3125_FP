@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginBottom="50dp"
-        app:srcCompat="@drawable/employee" />
+        app:srcCompat="@drawable/user" />
 
     <TextView
         android:id="@+id/textView7"
@@ -22,7 +23,9 @@
 
         android:text="Login Please"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtUsername"
@@ -59,18 +62,19 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="178dp"
+            android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="10dp"
-            android:text="Remember Me" />
+            android:text="Remember Me"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="200dp"
-        android:layout_gravity="right"
-        android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_gravity="right"
+        android:text="Login"
+        android:textColor="@color/colorAccent" />
 </LinearLayout>
