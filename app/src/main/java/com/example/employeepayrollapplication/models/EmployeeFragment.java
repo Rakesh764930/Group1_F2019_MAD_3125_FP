@@ -34,6 +34,7 @@ public class EmployeeFragment extends Fragment
 
         View v =  inflater.inflate(R.layout.employee_fragment_layout, container, false);
 
+        
 
         employees_list = Singleton.getObj().getList();
 
