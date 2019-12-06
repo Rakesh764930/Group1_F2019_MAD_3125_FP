@@ -57,8 +57,18 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter {
 
         }
 
-        public void bindData(Employee e,  SetCustomClickListener listener) {
+        public void bindData(final Employee e, final SetCustomClickListener listener) {
             name.setText("Name : " + e.getName());
+            age.setText("Age : "+e.getAge());
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.customOnClick(e);
+                }
+            });
+
+
         }
 
     }
