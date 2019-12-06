@@ -16,26 +16,5 @@ public class FullTime extends Employee {
         this.salary = salary;
         this.bonus = bonus;
     }
-//getters and setters
-    public double getSalary() {
-        return salary;
-    }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public double getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
-    }
-//calculating earnings
-    @Override
-    public double calcEarning() {
-
-        return this.getSalary()+this.getBonus();
-    }
 }
