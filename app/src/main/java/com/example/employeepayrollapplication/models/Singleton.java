@@ -18,7 +18,7 @@ public class Singleton {
 
         Intern i1 = new Intern(1,"Rajdeep Kaur",21,1998,"Lambton college",null);
         FullTime f1 = new FullTime(2,"Rakesh Kumar",21,150000,1998,140000,new Car(1998,"LVL123","Sports","Audi",4));
-        CommissionBasedPartTime c1 = new CommissionBasedPartTime(3,"Ajeet Singh",21,1998,20,20,20,new MotorCycle(1998,"LVL456","racing","Suzuki",45));
+        CommissionBasedPartTime c1 = new CommissionBasedPartTime(3,"Ajeet Singh",21,1998,20,20,20,new MotorCycle(1998,"LVL456","racing","Suzuki",45)) ;
         FixedBasedPartTime ft1 = new FixedBasedPartTime(4,"Rahul",20,1999,21,34,50.45,new Car(1998,"LVL123","Sports","Ferrari",4));
 
 
