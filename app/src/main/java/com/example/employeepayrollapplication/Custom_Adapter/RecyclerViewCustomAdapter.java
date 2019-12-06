@@ -73,7 +73,6 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
                 }
             });
 
-
         }
     }
 
