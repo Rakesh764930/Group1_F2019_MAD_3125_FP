@@ -1,5 +1,6 @@
 package com.example.employeepayrollapplication.Custom_Adapter;
 
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -23,4 +24,14 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return 0;
     }
+
+    class Viewholder extends RecyclerView.ViewHolder{
+
+        
+
+        public Viewholder(@NonNull View itemView) {
+            super(itemView);
+        }
+    }
+
 }
