@@ -19,6 +19,13 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
     ArrayList<Employee> arrayList;
     SetCustomClickListener listener;
 
+    public RecyclerViewCustomAdapter(ArrayList<Employee> employees_list, final SetCustomClickListener listener) {
+
+        this.arrayList = arrayList;
+        this.listener = listener;
+
+    }
+
 
     public interface SetCustomClickListener {
         public void customOnClick(Employee e);
@@ -76,10 +83,5 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
         }
     }
 
-    public RecyclerViewCustomAdapter(ArrayList<Employee> arrayList, SetCustomClickListener listener) {
-        super();
-        this.arrayList = arrayList;
-        this.listener = listener;
-    }
 }
 
