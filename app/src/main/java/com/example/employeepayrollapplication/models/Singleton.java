@@ -1,83 +1,55 @@
 package com.example.employeepayrollapplication.models;
 
+import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.util.List;
 
-public class Singleton{
+public class Singleton {
 
 
-    Dictionary emp_dict = new Hashtable();
-    private static Singleton instance;
+    static Singleton obj = null;
+    List<Employee> employees;
+    private Singleton()
+    {
 
-        private Singleton()
+
+        employees = new ArrayList<>();
+
+        Intern i1 = new Intern(1,"Rajdeep Kaur",21,1998,"Lambton college",null);
+        FullTime f1 = new FullTime(2,"Rakesh Kumar",21,150000,1998,140000,new Car(1998,"LVL123","Sports","Audi",4));
+        CommissionBasedPartTime c1 = new CommissionBasedPartTime(3,"Ajeet Singh",21,1998,20,20,20,new MotorCycle(1998,"LVL456","racing","Suzuki",45));
+        FixedBasedPartTime ft1 = new FixedBasedPartTime(4,"Rahul",20,1999,21,34,50.45,new Car(1998,"LVL123","Sports","Ferrari",4));
+
+
+
+        addIntoList(i1);
+        addIntoList(f1);
+        addIntoList(c1);
+        addIntoList(ft1);
+    }
+    public static Singleton getObj()
+    {
+        if(obj == null)
         {
+            obj = new Singleton();
 
         }
+        return obj;
+    }
+    public void addIntoList(Employee temp)
+    {
+        employees.add(temp);
 
-        public static Singleton getInstance1()
-        {
-            if (instance == null)
-            {
-                instance = new Singleton();
-            }
-            return instance;
-        }
+    }
 
 
 
-        //function to add customer in dictionary
-        public void  addEmployeeToDictionary(Employee e) {
-            emp_dict.put(emp,e);
-        }
-        //funtion to create customer objects and add using above function
-       public void  alreadyEmployee() {
-        // Employee 1
+    public ArrayList<Employee> getList()
+    {
+        return  ((ArrayList<Employee>)this.employees);
+    }
 
-           FullTime f1=new FullTime(1,"Rakesh",21,2000,2019,200,200,FullTime);
-      //Car c1=new Car(1998,"lvl123","Ducati",2);
-           //f1.addVehicle(v: c1)
-//MotorCycle m1=new MotorCycle(1,"Hayabhusa","lald");
-           //f1.addVehicle(v: m1)
 
-           // Customer 2
 
-FixedBasedPartTime f2=new FixedBasedPartTime(12,"Ajeet",21,2344,2019,1234,12,133);           let c2 = Car(brand: "Ferrari", numberOfSeats: 2, make: 2019, plate: "LVE142",type: "Car")
-         //  p1.addVehicle(v: c2)
-
-           addEmployeeToDictionary(e: f1)
-           addEmployeeToDictionary(e: p1)
-
-        }
-
-        //funtion to add customer
-//    func addEmployeeFullTime(firstname:String, lastname:String, age:Int, type: String)
-//    {
-//        let cId = empDict.count+1
-////
-//        let empType = type
-//        if empType.elementsEqual("FullTime"){}
-//        addEmployeeToDictionary(e: e)
-//
-//    }
-
-       public int  returnCount()  {
-        return emp_dict.size();
-        }
-
-        //Return Customer Object
-        public Employee returnEmpObj(int empId)
-        {
-           int id=empId;
-           for(int key)
-        if id==
-//            emp_dict.forEach((k, v) -> emp_dict.put(k, v));
-//        {
-//        if key==empId
-//        {
-//        return value
-//        }
-//        }
-//        return nil
-//        }
-
-        }
+}

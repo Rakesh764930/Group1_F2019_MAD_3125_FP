@@ -1,18 +1,18 @@
 package com.example.employeepayrollapplication.models;
 
-import com.example.employeepayrollapplication.models.Employee;
+
 
 public class PartTime  extends Employee {
 
     //V a r i a b l e   D e c l a r a t i o n
 
     private double rate;
-    private float  hoursWorked;
+    private double  hoursWorked;
 
     //G e t t e r   a n d   S e t t e r
 
-    public PartTime(int emp_id, String name, int age, double earnings, int birthYear, double rate, float hoursWorked) {
-        super(emp_id, name, age, earnings, birthYear);
+    public PartTime(int emp_id, String name, int age, int birthYear, double rate, double hoursWorked,Vehicle vehicle) {
+        super(emp_id, name, age, birthYear,vehicle);
         this.rate = rate;
         this.hoursWorked = hoursWorked;
     }
@@ -25,11 +25,11 @@ public class PartTime  extends Employee {
         this.rate = rate;
     }
 
-    public float getHoursWorked() {
+    public double getHoursWorked() {
         return hoursWorked;
     }
 
-    public void setHoursWorked(float hoursWorked) {
+    public void setHoursWorked(double hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
 

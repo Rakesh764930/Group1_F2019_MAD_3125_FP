@@ -1,11 +1,12 @@
 package com.example.employeepayrollapplication.models;
+
 public class Vehicle {
     // Variable Declaration
  int make;
  String plate;
  String type;
 
-    public Vehicle(String make, String plate, int type) {
+    public Vehicle(int make, String plate, String type) {
         this.make = make;
         this.plate = plate;
         this.type = type;
