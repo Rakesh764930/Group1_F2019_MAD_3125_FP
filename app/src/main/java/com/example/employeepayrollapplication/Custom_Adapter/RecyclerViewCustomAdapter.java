@@ -1,5 +1,6 @@
 package com.example.employeepayrollapplication.Custom_Adapter;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -10,11 +11,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.employeepayrollapplication.R;
 import com.example.employeepayrollapplication.models.Employee;
 
+import java.util.ArrayList;
+
 public class RecyclerViewCustomAdapter extends RecyclerView.Adapter {
 
     public interface SetCustomClickListener{
-        public  void customOnClick(Employee e);
+        public void customOnClick(Employee e);
     }
+
+    ArrayList<Employee> arrayList;
+    Context context;
+    SetCustomClickListener listener;
 
 
     @NonNull
@@ -30,7 +37,7 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return this.arrayList.size();
     }
 
     class Viewholder extends RecyclerView.ViewHolder{
