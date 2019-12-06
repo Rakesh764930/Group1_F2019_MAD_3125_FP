@@ -38,13 +38,11 @@ public class ThirdActivity extends AppCompatActivity {
 
         });
 
-        recyclerView = findViewById(R.id.recycler_view);
-        adapter = new RecyclerViewCustomAdapter(employees_list);
+        rvEmployeesList = findViewById(R.id.recycler_view);
+        customView = new RecyclerViewCustomAdapter(employees_list);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         //RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mLayoutManager.
-        recyclerView.se
-
 
     }
 
