@@ -1,41 +1,38 @@
 package com.example.employeepayrollapplication.models;
 
-public class Vehicle {
-    // Variable Declaration
- int make;
- String plate;
- String type;
 
-    public Vehicle(int make, String plate, String type) {
-        this.make = make;
-        this.plate = plate;
-        this.type = type;
+    public  class Vehicle  {
+        private String make;
+        private String plate;
+        private int mileage ;
+
+
+
+
+        public Vehicle(String make, String plate, int mileage) {
+            this.make = make;
+            this.plate = plate;
+            this.mileage = mileage;
+        }
+        public String getMake() {
+            return make;
+        }
+        public void setMake(String make) {
+            this.make = make;
+        }
+        public String getPlate() {
+            return plate;
+        }
+        public void setPlate(String plate) {
+            this.plate = plate;
+        }
+        public int getMileage() {
+            return mileage;
+        }
+        public void setMileage(int mileage) {
+            this.mileage = mileage;
+        }
+
+
+
     }
-
-    // Getters And Setters
-
-
-    public int getMake() {
-        return make;
-    }
-
-    public void setMake(int make) {
-        this.make = make;
-    }
-
-    public String getPlate() {
-        return plate;
-    }
-
-    public void setPlate(String plate) {
-        this.plate = plate;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-}
