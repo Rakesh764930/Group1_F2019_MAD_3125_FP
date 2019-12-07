@@ -13,8 +13,8 @@ public class CommissionBasedPartTime extends PartTime {
         this.commissionPerc = commissionPerc;
     }
 
-    public CommissionBasedPartTime(int emp_id, String name, int age,  int birthYear, double rate, double hoursWorked, double commissionPerc,Vehicle vehicle) {
-        super(emp_id, name, age, birthYear, rate, hoursWorked,vehicle);
+    public CommissionBasedPartTime(int emp_id, String name, int age, double rate, double hoursWorked, double commissionPerc, Vehicle vehicle) {
+        super(emp_id, name, age, rate, hoursWorked, vehicle);
         this.commissionPerc = commissionPerc;
     }
     public double commissionCalcEarnings()

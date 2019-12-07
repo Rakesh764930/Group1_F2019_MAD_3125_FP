@@ -2,12 +2,8 @@ package com.example.employeepayrollapplication.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
 
 
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.employeepayrollapplication.Custom_Adapter.RecyclerViewCustomAdapter;
+import com.example.employeepayrollapplication.Interface.EmployeeDetailsInterface;
 import com.example.employeepayrollapplication.R;
 import com.example.employeepayrollapplication.models.Employee;
 import com.example.employeepayrollapplication.models.Singleton;
@@ -30,44 +27,41 @@ import java.util.ArrayList;
 
 
 
-public class EmployeeListFragment extends Fragment {
+public class EmployeeListFragment extends Fragment  {
 
     ArrayList<Employee> employees_list;
     Context con;
     RecyclerView recyclerView;
     RecyclerViewCustomAdapter adapter;
-
     FragmentTransaction fragmentTransaction;
-    EmployeeDatailsFragment employeeDatailsFragment;
-
+    EmployeeDetailsFragment employeeDetailsFragment;
+    Employee employee;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         this.con = inflater.getContext();
-        Log.e("***************","inside onCreateView");
-
         View v =  inflater.inflate(R.layout.employee_list, container, false);
-
-
         employees_list = Singleton.getObj().getList();
 
         this.recyclerView = v.findViewById(R.id.recycler_view);
-        adapter = new RecyclerViewCustomAdapter(employees_list, this.con, new RecyclerViewCustomAdapter().SetCustomClickListener() {
+        adapter = new RecyclerViewCustomAdapter(employees_list, this.con, new RecyclerViewCustomAdapter.SetCustomClickListener() {
             @Override
-            public void customOnClick(Employee employee) {
-                Toast.makeText(EmployeeListFragment.this.con, employee.getName(), Toast.LENGTH_LONG).show();
-                if(employeeDatailsFragment == null) {
-                    employeeDatailsFragment = new EmployeeDatailsFragment();
+            public void customOnClick(Employee e) {
+
+                Toast.makeText(EmployeeListFragment.this.con, e.getName(), Toast.LENGTH_LONG).show();
+                if(employeeDetailsFragment == null) {
+                    employeeDetailsFragment = new EmployeeDetailsFragment();
                 }
-                employeeDatailsFragment.emp_Object(employee);
+                employeeDetailsFragment.employeeObject(e);
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout , employeeDatailsFragment , "");
+                fragmentTransaction.replace(R.id.frame_layout , employeeDetailsFragment, "");
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
 
             }
-        });
+        }
+        );
 
         this.recyclerView.setAdapter(adapter);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this.con));

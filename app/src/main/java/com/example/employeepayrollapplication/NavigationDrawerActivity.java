@@ -1,69 +1,62 @@
 package com.example.employeepayrollapplication;
 
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+
+import com.example.employeepayrollapplication.Fragments.AddNewEmployee;
+import com.example.employeepayrollapplication.Fragments.EmployeeListFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.webkit.WebView;
-import android.widget.Toast;
-import android.widget.Toolbar;
+import android.view.View;
 
-import com.example.employeepayrollapplication.models.EmployeeFragment;
+import androidx.appcompat.app.ActionBar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.drawerlayout.widget.DrawerLayout;
 
-public class NavigationDrawerActivity extends AppCompatActivity{
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-    private WebView webView;
+import android.view.Menu;
+import android.webkit.WebView;
+import android.widget.Toast;
 
-
-    Toolbar customToolBar;
-    NavigationView nav_view;
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
-    AboutUsFragment aboutUsFragment;
-    AddEmployeesFragment addEmployeesFragment;
-    EmployeeFragment employeeFragment;
-    ContactUsFragment contactUsFragment;
-    DrawerLayout nav_drawer;
+public class NavigationDrawerActivity extends AppCompatActivity {
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        Toolbar customToolBar;
+        NavigationView nav_view;
+        FragmentManager fragmentManager;
+        FragmentTransaction fragmentTransaction;
+        AddNewEmployee addEmployeesFragment;
+        EmployeeListFragment employeeFragment;
+        //ContactUsFragment contactUsFragment;
+        DrawerLayout nav_drawer;
+
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
-
-
-
-
-
-
-
-
-
-
         this.nav_drawer = (DrawerLayout) findViewById(R.id.nav_drawer);
-        employeeFragment = new EmployeeFragment();
+        employeeFragment = new EmployeeListFragment();
 
-
-
-        //reference -  https://stackoverflow.com/questions/26486730/in-android-app-toolbar-settitle-method-has-no-effect-application-name-is-shown
-        // for displaying title on ToolBar
-        // reference - https://developer.android.com/training/implementing-navigation/nav-drawer
-        // for Add the nav drawer button
-        this.customToolBar = findViewById(R.id.Customtoolbar);
+        this.customToolBar = findViewById(R.id.customToolbar);
         setSupportActionBar(this.customToolBar);
         final ActionBar actionbar = getSupportActionBar();
         actionbar.setTitle("My title");
         actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeAsUpIndicator(R.drawable.navigation_drawer_button_24dp);
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_action_navbar);
 
         fragmentManager = getSupportFragmentManager();
         this.fragmentTransaction = fragmentManager.beginTransaction();
@@ -140,13 +133,14 @@ public class NavigationDrawerActivity extends AppCompatActivity{
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.nav_drawer.openDrawer(Gravity.START);
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
     }
 }

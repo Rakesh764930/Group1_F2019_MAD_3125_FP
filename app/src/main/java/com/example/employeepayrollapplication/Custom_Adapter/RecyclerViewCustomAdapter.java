@@ -18,10 +18,12 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
 
     ArrayList<Employee> arrayList;
     SetCustomClickListener listener;
+    Context context;
 
-    public RecyclerViewCustomAdapter(ArrayList<Employee> employees_list, final SetCustomClickListener listener) {
+    public RecyclerViewCustomAdapter(ArrayList<Employee> employees_list, Context context, final SetCustomClickListener listener) {
 
         this.arrayList = arrayList;
+        this.context = context;
         this.listener = listener;
 
     }
@@ -35,8 +37,10 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_layout, parent, false);
-        return new ViewHolder(itemView);
+        LayoutInflater inflater = LayoutInflater.from(this.context);
+        View view = inflater.inflate(R.layout.recyclerview_layout, parent, false);
+        ViewHolder viewHolder = new ViewHolder(view);
+        return viewHolder;
 
     }
 
@@ -56,14 +60,14 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView name;
-        TextView gender;
+
         TextView age;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.emp_name);
-            gender = itemView.findViewById(R.id.emp_type);
+
             age = itemView.findViewById(R.id.emp_age);
 
         }

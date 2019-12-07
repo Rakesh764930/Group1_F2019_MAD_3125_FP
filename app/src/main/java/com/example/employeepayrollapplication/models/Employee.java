@@ -13,11 +13,11 @@ private int emp_id;
 
     private int birthYear = 0 ;
 
-    public Employee(int emp_id, String name, int age) {
+    public Employee(int emp_id, String name, int age, Vehicle vehicle) {
         this.emp_id = emp_id;
         this.name = name;
         this.age = age;
-
+        this.vehicle = vehicle;
 
 
     }

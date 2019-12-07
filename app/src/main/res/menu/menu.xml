@@ -7,31 +7,31 @@
 
     <group android:checkableBehavior="single" >
 
-        <item android:id="@+id/Home"
-            android:icon="@drawable/employees_24dp"
+        <item android:id="@+id/emp"
+
             android:title="Employees"
-            android:iconTint="@color/orange"/>
+            />
         <item android:id="@+id/add_employee"
-            android:icon="@drawable/add_employee_24dp"
+
             android:title="View Employee"
-            android:iconTint="@color/yello"
+
             />
         <item android:id="@+id/about_us"
-            android:icon="@drawable/about_us_24dp"
-            android:title="Add Employee"
-            android:iconTint="@color/pink"/>
+            android:icon="@drawable/ic_action_navbar"
+            android:title="Add Employee"/>
+
 
         <item android:id="@+id/contact_us"
-            android:icon="@drawable/contact_us_24dp"
-            android:title="Contact Us"
-            android:iconTint="@color/pink"/>
+
+            android:title="Contact Us"/>
+
     </group>
     <item android:title="">
         <menu>
             <item android:id="@+id/logout"
-                android:icon="@drawable/logout_24dp"
+
                 android:title="Logout"
-                android:iconTint="@color/light_grey" />
+                 />
         </menu>
 
     </item>

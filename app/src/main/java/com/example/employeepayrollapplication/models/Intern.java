@@ -6,8 +6,8 @@ public class Intern extends Employee {
 
     //constuctor
 
-    public Intern(int emp_id, String name, int age,  int birthYear, String schoolName,Vehicle vehicle) {
-        super(emp_id, name, age, birthYear,vehicle);
+    public Intern(int emp_id, String name, int age, String schoolName,Vehicle vehicle) {
+        super(emp_id, name, age,vehicle);
         this.schoolName = schoolName;
     }
 

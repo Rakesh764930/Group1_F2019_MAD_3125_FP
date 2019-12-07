@@ -14,6 +14,9 @@ import android.content.Intent;
 import android.content.DialogInterface;
 import android.content.*;
 import android.widget.CompoundButton;
+
+import com.example.employeepayrollapplication.Fragments.EmployeeListFragment;
+
 public class LoginActivity extends  AppCompatActivity  {
     private EditText edtUsername;
     private EditText edtPassword;
@@ -35,9 +38,8 @@ btnLogin.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
 
         if (edtUsername.getText().toString().trim().equals("user@employee.com") && edtPassword.getText().toString().trim().equals("s3cr3t")){
-            Intent nintent=new Intent(LoginActivity.this,ThirdActivity.class);
-            //   nintent.putExtra("name",edtUsername.getText().toString());
-            startActivity(nintent);
+            Intent mIntent=new Intent(LoginActivity.this, NavigationDrawerActivity.class);
+            startActivity(mIntent);
         }
         else{
             btnLogin.setAlpha(.5f);
@@ -66,11 +68,7 @@ btnLogin.setOnClickListener(new View.OnClickListener() {
 }  public void showAlert()
     {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setIcon(R.drawable.bb8);
         alertDialogBuilder.setTitle("Login error");
-
-
-        alertDialogBuilder.setNegativeButtonIcon(getResources().getDrawable(R.drawable.bb8));
         AlertDialog mAlertDialog=alertDialogBuilder.create();
         mAlertDialog.show();
     }

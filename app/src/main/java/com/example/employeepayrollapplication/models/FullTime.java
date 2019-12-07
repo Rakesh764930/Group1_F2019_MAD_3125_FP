@@ -9,8 +9,8 @@ public class FullTime extends Employee {
 
     //constructor
 
-    public FullTime(int emp_id, String name, int age, double salary, double bonus) {
-        super(emp_id, name, age);
+    public FullTime(int emp_id, String name, int age, double salary, double bonus, Vehicle vehicle) {
+        super(emp_id, name, age, vehicle);
         this.salary = salary;
         this.bonus = bonus;
     }
