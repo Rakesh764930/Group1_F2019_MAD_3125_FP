@@ -55,7 +55,6 @@ public class EmployeeListFragment extends Fragment  {
                 }
                 employeeDetailsFragment.employeeObject(e);
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.frame_layout , employeeDetailsFragment, "");
                 fragmentTransaction.commit();
                 fragmentTransaction.addToBackStack(null);
 
