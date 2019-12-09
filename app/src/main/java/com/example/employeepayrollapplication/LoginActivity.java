@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
+import android.util.Log;
 
 public class LoginActivity extends  AppCompatActivity  {
     private EditText edtUsername;
@@ -27,13 +28,15 @@ btnLogin.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
 
        if (edtUsername.getText().toString().trim().equals("user@employee.com") && edtPassword.getText().toString().trim().equals("s3cr3t")){
-            Intent intent=new Intent(LoginActivity.this, NavigationDrawerActivity.class);
-            startActivity(intent);
-        }
+            Intent mIntent=new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(mIntent);
+           Log.d("myTag", "Success");
+       }
         else{
             btnLogin.setAlpha(.5f);
             edtUsername.setError("Please enter valid email or password");
             showAlert();
+
 
      }
 
