@@ -38,7 +38,10 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
     CardView intern_card;
     TextView employment_type;
     TextView total_earning;
-    Intern intern; FullTime fullTime; CommissionBasedPartTime commissionbasedPartTime; FixedBasedPartTime fixedBasedPartTime;
+    Intern intern;
+    FullTime fullTime;
+    CommissionBasedPartTime commissionbasedPartTime;
+    FixedBasedPartTime fixedBasedPartTime;
 
     private OnFragmentInteractionListener mListener;
 
@@ -67,3 +70,34 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
         return inflater.inflate(R.layout.fragment_employee_details, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        this.empId = view.findViewById(R.id.emp_Id);
+        this.name = view.findViewById(R.id.text_name_value);
+        this.age = view.findViewById(R.id.text_age_value);
+        this.emptype = view.findViewById(R.id.text_employment_type_value);
+        this.txtVehicle = view.findViewById(R.id.text_vehicle_value);
+        this.parttime_card = view.findViewById(R.id.parttime_card);
+        this.fulltime_card = view.findViewById(R.id.fulltime_card);
+        this.intern_card = view.findViewById(R.id.intern_card);
+        this.employment_type = view.findViewById(R.id.text_emptype_value);
+        this.total_earning = view.findViewById(R.id.text_total_earning_val);
+        this.txtMake = view.findViewById(R.id.text_make_value);
+        this.txtMileage = view.findViewById(R.id.text_model_value);
+        this.txtPlate = view.findViewById(R.id.text_plate_value);
+
+        this.name.setText(employee.getName().toUpperCase());
+        this.age.setText(employee.getAge() + "");
+
+        this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
+        String make = employee.getVehicle().getMake();
+        this.txtMake.setText(make);
+        String plate = employee.getVehicle().getPlate();
+
+        this.txtPlate.setText(plate);
+        String mileage = (employee.getVehicle().getMileage());
+        this.txtMileage.setText(mileage);
+
+    }
+}
