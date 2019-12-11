@@ -7,31 +7,31 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.employeepayrollapplication.Fragments.HomeFragment"
+        android:name="com.example.employeepayrollapplication.fragments.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_employees"
-        android:name="com.example.employeepayrollapplication.Fragments.EmployeeFragment"
+        android:name="com.example.employeepayrollapplication.fragments.EmployeeFragment"
         android:label="@string/menu_employees"
         tools:layout="@layout/fragment_employees" />
 
     <fragment
         android:id="@+id/nav_add_employees"
-        android:name="com.example.employeepayrollapplication.Fragments.AddEmployeeFragment"
+        android:name="com.example.employeepayrollapplication.fragments.AddEmployeeFragment"
         android:label="@string/menu_add_employees"
         tools:layout="@layout/fragment_add_employees" />
 
     <fragment
         android:id="@+id/nav_help"
-        android:name="com.example.employeepayrollapplication.Fragments.HelpFragment"
+        android:name="com.example.employeepayrollapplication.fragments.HelpFragment"
         android:label="@string/menu_help"
         tools:layout="@layout/fragment_help" />
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.example.employeepayrollapplication.Fragments.LogoutFragment"
+        android:name="com.example.employeepayrollapplication.fragments.LogoutFragment"
         android:label="@string/menu_logout"
         tools:layout="@layout/fragment_logout" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.employeepayrollapplication.Fragments;
+package com.example.employeepayrollapplication.fragments;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -70,7 +70,7 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        this.empId = view.findViewById(R.id.text_)
+     this.empId = view.findViewById(R.id.emp_Id);
         this.name = view.findViewById(R.id.text_name_value);
         this.age = view.findViewById(R.id.text_age_value);
         this.emptype = view.findViewById(R.id.text_employment_type_value);
@@ -89,13 +89,12 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
 
         this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
 
-        this.txtMake.setText(employee.getVehicle().getMake());
-        this.txtPlate.setText(employee.getVehicle().getPlate());
-        this.txtModel.setText(employee.getVehicle().getMake());
+// this.txtMake.setText(employee.getVehicle().getMake());
+//        this.txtPlate.setText(employee.getVehicle().getPlate());
+//        this.txtModel.setText(employee.getVehicle().getMileage());
 
         if(employee instanceof PartTime)
         {
-
             fulltime_card.setVisibility(View.GONE);
             intern_card.setVisibility(View.GONE);
             TextView rate = view.findViewById(R.id.text_rate_value);
@@ -108,12 +107,11 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
 
             if(employee instanceof CommissionBasedPartTime)
             {
-                this.employment_type.setText("COMMISSION BASED");//for header label
-                this.emptype.setText("Commission Based Part Time");// for text view below age
+                this.employment_type.setText("COMMISSION BASED");
+                this.emptype.setText("Commission Based Part Time");
                 commission_fixedamount_label.setText("COMMISSION");
                 commission_fixedamount_value.setText(((CommissionBasedPartTime) employee).getCommissionPerc()+"%");
                 this.total_earning.setText("$ "+((CommissionBasedPartTime)employee).commissionCalcEarnings());
-
             }
             else
             {
