@@ -124,3 +124,30 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
                 commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
                 this.total_earning.setText("$ "+((FixedBasedPartTime)employee).fixedAmountCalcEarnings());
             }
+
+        }else if(employee instanceof FullTime){
+            parttime_card.setVisibility(View.GONE);
+            intern_card.setVisibility(View.GONE);
+            this.employment_type.setText("FULL TIME");
+            this.emptype.setText("Full Time");// for text view below age
+
+            TextView salary = view.findViewById(R.id.text_salary_value);
+            TextView bonus = view.findViewById(R.id.text_bonus_value);
+
+            salary.setText("$ "+((FullTime) employee).getSalary());
+            bonus.setText("$ "+((FullTime) employee).getBonus());
+            this.total_earning.setText("$ "+ employee.calcEarning());
+        }else{
+            parttime_card.setVisibility(View.GONE);
+            fulltime_card.setVisibility(View.GONE);
+            this.employment_type.setText("INTERN");
+            this.emptype.setText("Intern");// for text view below age
+            this.internSchool = view.findViewById(R.id.text_school_value);
+            internSchool.setText(((Intern)employee).getSchoolName());
+
+            this.total_earning.setText("$ "+ employee.calcEarning());
+        }
+
+    }
+
+   
