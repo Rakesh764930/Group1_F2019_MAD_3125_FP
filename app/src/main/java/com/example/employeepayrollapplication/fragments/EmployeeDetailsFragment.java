@@ -38,10 +38,7 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
     CardView intern_card;
     TextView employment_type;
     TextView total_earning;
-    Intern intern;
-    FullTime fullTime;
-    CommissionBasedPartTime commissionbasedPartTime;
-    FixedBasedPartTime fixedBasedPartTime;
+    Intern intern; FullTime fullTime; CommissionBasedPartTime commissionbasedPartTime; FixedBasedPartTime fixedBasedPartTime;
 
     private OnFragmentInteractionListener mListener;
 
@@ -73,7 +70,7 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        this.empId = view.findViewById(R.id.emp_Id);
+     this.empId = view.findViewById(R.id.emp_Id);
         this.name = view.findViewById(R.id.text_name_value);
         this.age = view.findViewById(R.id.text_age_value);
         this.emptype = view.findViewById(R.id.text_employment_type_value);
@@ -88,16 +85,42 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
         this.txtPlate = view.findViewById(R.id.text_plate_value);
 
         this.name.setText(employee.getName().toUpperCase());
-        this.age.setText(employee.getAge() + "");
+        this.age.setText(employee.getAge()+"");
 
         this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
-        String make = employee.getVehicle().getMake();
-        this.txtMake.setText(make);
-        String plate = employee.getVehicle().getPlate();
+        String make=employee.getVehicle().getMake();
+ this.txtMake.setText(make);
+ String plate=employee.getVehicle().getPlate();
 
-        this.txtPlate.setText(plate);
-        String mileage = (employee.getVehicle().getMileage());
-        this.txtMileage.setText(mileage);
+    this.txtPlate.setText(plate);
+     String mileage=(employee.getVehicle().getMileage());
+    this.txtMileage.setText(mileage);
 
-    }
-}
+        if(employee instanceof PartTime)
+        {
+            fulltime_card.setVisibility(View.GONE);
+            intern_card.setVisibility(View.GONE);
+            TextView rate = view.findViewById(R.id.text_rate_value);
+            TextView hour = view.findViewById(R.id.text_hours_value);
+            TextView commission_fixedamount_value = view.findViewById(R.id.text_commission_fixedamount_value);
+            TextView commission_fixedamount_label = view.findViewById(R.id.text_commission_fixedamount_label);
+
+            rate.setText("$ "+((PartTime) employee).getRate());
+            hour.setText(((PartTime) employee).getHoursWorked()+"");
+
+            if(employee instanceof CommissionBasedPartTime)
+            {
+                this.employment_type.setText("COMMISSION BASED");
+                this.emptype.setText("Commission Based Part Time");
+                commission_fixedamount_label.setText("COMMISSION");
+                commission_fixedamount_value.setText(((CommissionBasedPartTime) employee).getCommissionPerc()+"%");
+                this.total_earning.setText("$ "+((CommissionBasedPartTime)employee).commissionCalcEarnings());
+            }
+            else
+            {
+                this.employment_type.setText("Fixed BASED");
+                this.emptype.setText("Fixed Based Part Time");// for text view below age
+                commission_fixedamount_label.setText("FIXED AMOUNT");
+                commission_fixedamount_value.setText("$ "+((FixedBasedPartTime) employee).getFixedAmount());
+                this.total_earning.setText("$ "+((FixedBasedPartTime)employee).fixedAmountCalcEarnings());
+            }
