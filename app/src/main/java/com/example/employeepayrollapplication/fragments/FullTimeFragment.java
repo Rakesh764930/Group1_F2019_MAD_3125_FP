@@ -102,3 +102,41 @@ public class FullTimeFragment extends Fragment implements AddEmployeeInterface {
                     txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
                     radioVehicle.clearCheck();
                 }
+                else
+                {
+                    Toast.makeText(getActivity(), "No field can be empty and unselected" , Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
+
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
+    }
+
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    @Override
+    public void defaultViewsAddEmployeeFragment(TextView id, TextView name, TextView age,
+                                                TextView date, RadioGroup vehicle) {
+
+        this.txtId= id;
+        this.txtName= name;
+        this.txtAge = age;
+        this.txtDateOfBirth = date;
+        this.radioVehicle = vehicle;
+    }
+
+
+    public interface OnFragmentInteractionListener {
+        void onFragmentInteraction(Uri uri);
+    }
+}
