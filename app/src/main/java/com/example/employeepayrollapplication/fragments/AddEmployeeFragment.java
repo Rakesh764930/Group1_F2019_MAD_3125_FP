@@ -50,7 +50,35 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
-    
+    {
+        super.onViewCreated(view, savedInstanceState);
+        this.id = view.findViewById(R.id.text_id);
+        this.rgVehicle = view.findViewById(R.id.radio_group_vehicle);
+        this.text_age = view.findViewById(R.id.text_age);
+        this.text_name = view.findViewById(R.id.text_name);
+        this.text_date_of_birth = view.findViewById(R.id.text_date_of_birth);
+        this.employementtype = view.findViewById(R.id.radio_group_employment);
+        this.checkVehicle = view.findViewById(R.id.check_vehicle);
+        this.layoutVehicle = view.findViewById(R.id.add_vehicledetails);
+        this.fragmentManager = this.getActivity().getSupportFragmentManager();
+
+        //date picker
+        this.text_date_of_birth.setOnClickListener(this);
+        //checking rgVehicle
+        layoutVehicle.setVisibility(View.GONE);
+        checkVehicle.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                if (checkVehicle.isChecked()){
+                    layoutVehicle.setVisibility(View.VISIBLE);
+                }else{
+                    layoutVehicle.setVisibility(View.GONE);
+                }
+            }
+        });
+
+    }
 
     @Override
     public void onClick(View v) {
