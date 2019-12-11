@@ -1,4 +1,4 @@
-package com.example.employeepayrollapplication.ui.slideshow;
+package com.example.employeepayrollapplication.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.employeepayrollapplication.R;
 
-public class SlideshowFragment extends Fragment {
-
+public class ShareFragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-       View root = inflater.inflate(R.layout.fragment_logout, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
+
+        View root = inflater.inflate(R.layout.fragment_share, container, false);
+        final TextView textView = root.findViewById(R.id.text_share);
 
         return root;
     }

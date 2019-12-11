@@ -1,4 +1,4 @@
-package com.example.employeepayrollapplication.ui.send;
+package com.example.employeepayrollapplication.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,16 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.employeepayrollapplication.R;
 
-public class SendFragment extends Fragment {
+
+public class HomeFragment extends Fragment {
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_add_employee, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        final TextView textView = root.findViewById(R.id.text_home);
 
         return root;
     }
