@@ -30,3 +30,9 @@ public class HelpFragment extends Fragment {
             public void onClick(DialogInterface dialog, int which) {
             }
         });
+        alertDailogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
