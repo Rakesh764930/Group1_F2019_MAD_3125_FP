@@ -96,7 +96,22 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                     fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.partTimeFragment);
                     fragmentTransaction.commit();
                     Toast.makeText(AddEmployeeFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
-                    
+                    break;
+                case R.id.radio_fulltime :
+
+                    if(AddEmployeeFragment.this.fullTimeFragment  == null)
+                    {
+                        AddEmployeeFragment.this.fullTimeFragment = new FullTimeFragment();
+                        AddEmployeeFragment.this.fullTimeFragment.defaultViewsAddEmployeeFragment(id, text_name, text_age, text_date_of_birth, rgVehicle);
+                    }
+
+                    fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.fullTimeFragment);
+                    fragmentTransaction.commit();
+                    Toast.makeText(AddEmployeeFragment.this.getContext(), "fulltime" , Toast.LENGTH_LONG).show();
+                    break;
+                case R.id.radio_intern :
+
     }
 
     @Override
