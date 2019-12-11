@@ -36,3 +36,7 @@ public class HelpFragment extends Fragment {
 
             }
         });
+        AlertDialog mAlertDialog = alertDailogBuilder.create();
+        mAlertDialog.show();
+    }
+}
