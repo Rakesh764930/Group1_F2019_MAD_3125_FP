@@ -67,6 +67,14 @@ private int emp_id;
         this.name = name;
     }
 
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
     public int getAge() {
         return age;
     }
