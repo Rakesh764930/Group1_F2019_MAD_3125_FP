@@ -19,6 +19,8 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView textView = root.findViewById(R.id.txtDateTime);
         
+        textView.setText("" + DateFormat.format("MMM-dd-yyyy    kk:mm", System.currentTimeMillis()));
+
         return root;
     }
 }
