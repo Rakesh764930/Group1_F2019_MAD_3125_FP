@@ -22,7 +22,7 @@ public class HelpFragment extends Fragment {
     }
     public void showAlert(){
         androidx.appcompat.app.AlertDialog.Builder alertDailogBuilder = new androidx.appcompat.app.AlertDialog.Builder(getActivity());
-      alertDailogBuilder.setTitle("Contacts ");
+        alertDailogBuilder.setTitle("Contacts ");
         alertDailogBuilder.setMessage("Email: abc@payrollapp.ca\n" +
                 "Phone: (+1)123-456-7891");
         alertDailogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -30,13 +30,3 @@ public class HelpFragment extends Fragment {
             public void onClick(DialogInterface dialog, int which) {
             }
         });
-        alertDailogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        AlertDialog mAlertDialog = alertDailogBuilder.create();
-        mAlertDialog.show();
-    }
-}
