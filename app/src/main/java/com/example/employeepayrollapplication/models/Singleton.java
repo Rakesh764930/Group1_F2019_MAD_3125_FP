@@ -16,10 +16,10 @@ public class Singleton {
 
         employees = new ArrayList<>();
 
-        Intern i1 = new Intern(1,"Rajdeep Kaur",21,"Lambton college",new Car("2017","LVL12",13,"Mustang",4) );
-        FullTime f1 = new FullTime(2,"Rakesh Kumar",21,150000,1998, new Car("2019", "LVL852", 67, "Beamer", 5));
-        CommissionBasedPartTime c1 = new CommissionBasedPartTime(7,"Jay-Z", 35,233,12,12,new MotorCycle("1234","fgklf",41,"dfdh","dff"));
-        FixedBasedPartTime ft1 = new FixedBasedPartTime(1,"Raijk",14,59289,14,145,new Car("asdd","esr",14,"rtrt",7));
+        Intern i1 = new Intern(1,"Rajdeep Kaur",21,"Lambton college",new Car("2017","LVL12","13 mi/hr") );
+        FullTime f1 = new FullTime(2,"Rakesh Kumar",21,150000,1998, new Car("2019", "LVL852", "14 mi/hr"));
+        CommissionBasedPartTime c1 = new CommissionBasedPartTime(7,"Jay-Z", 35,233,12,12,new MotorCycle("1234","LVL980","52 mi/hr"));
+        FixedBasedPartTime ft1 = new FixedBasedPartTime(1,"Raijk",14,59289,14,145,new Car("2019","esr","23 mi/hr"));
 
 
         addIntoList(i1);

@@ -4,12 +4,12 @@ package com.example.employeepayrollapplication.models;
     public  class Vehicle  {
         private String make;
         private String plate;
-        private int mileage ;
+        private String mileage ;
 
 
 
 
-        public Vehicle(String make, String plate, int mileage) {
+        public Vehicle(String make, String plate, String mileage) {
             this.make = make;
             this.plate = plate;
             this.mileage = mileage;
@@ -26,10 +26,10 @@ package com.example.employeepayrollapplication.models;
         public void setPlate(String plate) {
             this.plate = plate;
         }
-        public int getMileage() {
+        public String getMileage() {
             return mileage;
         }
-        public void setMileage(int mileage) {
+        public void setMileage(String mileage) {
             this.mileage = mileage;
         }
 

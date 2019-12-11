@@ -31,7 +31,7 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
     TextView name, age, emptype, txtVehicle;
     TextView internSchool;
     CardView vehicle_card;
-    TextView txtModel, txtPlate, txtMake;
+    TextView txtMileage, txtPlate, txtMake;
 
     CardView parttime_card;
     CardView fulltime_card;
@@ -81,17 +81,20 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
         this.employment_type = view.findViewById(R.id.text_emptype_value);
         this.total_earning = view.findViewById(R.id.text_total_earning_val);
         this.txtMake = view.findViewById(R.id.text_make_value);
-        this.txtModel = view.findViewById(R.id.text_model_value);
+        this.txtMileage = view.findViewById(R.id.text_model_value);
         this.txtPlate = view.findViewById(R.id.text_plate_value);
 
         this.name.setText(employee.getName().toUpperCase());
         this.age.setText(employee.getAge()+"");
 
         this.txtVehicle.setText(employee.getVehicle() == null ? "null" : employee.getVehicle() instanceof Car ? "CAR" : "MOTER CYCLE");
+        String make=employee.getVehicle().getMake();
+ this.txtMake.setText(make);
+ String plate=employee.getVehicle().getPlate();
 
-// this.txtMake.setText(employee.getVehicle().getMake());
-//        this.txtPlate.setText(employee.getVehicle().getPlate());
-//        this.txtModel.setText(employee.getVehicle().getMileage());
+    this.txtPlate.setText(plate);
+     String mileage=(employee.getVehicle().getMileage());
+    this.txtMileage.setText(mileage);
 
         if(employee instanceof PartTime)
         {

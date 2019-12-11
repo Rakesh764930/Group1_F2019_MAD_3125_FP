@@ -82,10 +82,10 @@ public class FullTimeFragment extends Fragment implements AddEmployeeInterface {
                     Vehicle vehicle_Vehicle = null;
                     switch (radioVehicle.getCheckedRadioButtonId()) {
                         case R.id.radio_car:
-                            vehicle_Vehicle = new Car("","",0,"",0);
+                            vehicle_Vehicle = new Car("",""," ");
                             break;
                         case R.id.radio_motorCycle:
-                            vehicle_Vehicle = new MotorCycle("","",0,"","");
+                            vehicle_Vehicle = new MotorCycle("",""," ");
                             break;
 
                     }

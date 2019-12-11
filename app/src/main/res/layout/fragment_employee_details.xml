@@ -5,6 +5,7 @@
     android:id="@+id/text_total_earning_value"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A7F3FC"
     android:orientation="vertical">
 
     <TextView
@@ -18,13 +19,14 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#A2EDF5">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white">
+            android:background="#C9F5FA">
 
             <TextView
                 android:id="@+id/text_name_label"
@@ -45,6 +47,7 @@
                 android:text="AGE"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_name_label" />
+
             <TextView
                 android:id="@+id/text_emptype_label"
                 android:layout_width="wrap_content"
@@ -54,6 +57,7 @@
                 android:text="EMPLOYEE TYPE"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_age_label" />
+
             <TextView
                 android:id="@+id/text_vehicle_label"
                 android:layout_width="wrap_content"
@@ -83,6 +87,7 @@
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_name_value" />
+
             <TextView
                 android:id="@+id/text_emptype_value"
                 android:layout_width="wrap_content"
@@ -106,6 +111,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_vehicledetails"
         android:layout_width="match_parent"
@@ -115,7 +121,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white">
+            android:background="@color/white"
+            android:backgroundTint="#B9F4FA">
 
             <TextView
                 android:id="@+id/text_make_label"
@@ -143,9 +150,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="MODEL"
+                android:text="MILEAGE"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_plate_label" />
+
+
 
             <TextView
                 android:id="@+id/text_make_value"
@@ -181,8 +190,6 @@
     </androidx.cardview.widget.CardView>
 
 
-
-
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
@@ -198,7 +205,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#B6F7FD">
 
             <TextView
                 android:id="@+id/text_rate_label"
@@ -218,8 +226,7 @@
                 android:layout_marginTop="11dp"
                 android:text="NUMBER OF HOURS"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_rate_label"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/text_rate_label" />
 
             <TextView
                 android:id="@+id/text_commission_fixedamount_label"
@@ -229,8 +236,7 @@
                 android:layout_marginTop="14dp"
                 android:text="TextView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_hours_label"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/text_hours_label" />
 
             <TextView
                 android:id="@+id/text_rate_value"
@@ -240,8 +246,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_hours_value"
@@ -251,8 +256,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_rate_value"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/text_rate_value" />
 
             <TextView
                 android:id="@+id/text_commission_fixedamount_value"
@@ -262,8 +266,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_hours_value"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/text_hours_value" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -275,7 +278,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#A0EDF5">
 
             <TextView
                 android:id="@+id/text_salary_label"
@@ -285,8 +289,7 @@
                 android:layout_marginTop="8dp"
                 android:text="SALARY"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_bonus_label"
@@ -296,8 +299,7 @@
                 android:layout_marginTop="8dp"
                 android:text="BONUS"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_salary_label"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/text_salary_label" />
 
             <TextView
                 android:id="@+id/text_salary_value"
@@ -307,8 +309,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                          />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_bonus_value"
@@ -318,8 +319,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_salary_value"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/text_salary_value" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -330,7 +330,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#9FEEF7">
 
 
             <TextView
@@ -367,23 +368,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="42dp"
+            android:orientation="horizontal"
+            android:background="#A4EBF3">
 
-/>
-
+            >
             <TextView
-                android:id="@+id/text_total_earning_val"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="TextView"
+                android:layout_weight="1"
+                android:text="Total  income"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/text_total_earning_val"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textAlignment="viewEnd"
+                android:layout_marginEnd="8dp"
+                android:text="Toata income"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
