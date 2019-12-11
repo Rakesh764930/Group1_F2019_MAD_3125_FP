@@ -28,6 +28,19 @@ import com.example.employeepayrollapplication.models.Vehicle;
 
 
 public class FullTimeFragment extends Fragment implements AddEmployeeInterface {
+    TextView txtId;
+    TextView txtName;
+    TextView txtAge;
+    TextView txtDateOfBirth;
+    RadioGroup radioVehicle;
+    TextView txtSalary;
+    TextView txtBonus;
+    Button btnAddFullTime;
+    private OnFragmentInteractionListener mListener;
+
+    public FullTimeFragment() {
+        // Required empty public constructor
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,4 +57,9 @@ public class FullTimeFragment extends Fragment implements AddEmployeeInterface {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        this.txtSalary = view.findViewById(R.id.text_salary);
+        this.txtBonus = view.findViewById(R.id.text_bonus);
+
+
+        this.btnAddFullTime = view.findViewById(R.id.btn_fulltime_employee);
     }
