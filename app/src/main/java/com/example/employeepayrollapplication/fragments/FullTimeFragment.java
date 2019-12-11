@@ -62,4 +62,43 @@ public class FullTimeFragment extends Fragment implements AddEmployeeInterface {
 
 
         this.btnAddFullTime = view.findViewById(R.id.btn_fulltime_employee);
-    }
+        this.btnAddFullTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                if( !txtBonus.getText().toString().isEmpty()
+                        && !txtSalary.getText().toString().isEmpty()
+                        && !txtId.getText().toString().isEmpty()
+                        && !txtName.getText().toString().isEmpty()
+                        &&  !txtAge.getText().toString().isEmpty()) {
+                    int id_int = Integer.parseInt(txtId.getText().toString());
+                    String name_string = txtName.getText().toString();
+                    String birthyear_int = txtDateOfBirth.getText().toString();
+                    int age_int = Integer.parseInt(txtAge.getText().toString().substring(6));
+                    int salary_int = Integer.parseInt(txtSalary.getText().toString());
+                    int bonus_int = Integer.parseInt(txtBonus.getText().toString());
+
+                    Vehicle vehicle_Vehicle = null;
+                    switch (radioVehicle.getCheckedRadioButtonId()) {
+                        case R.id.radio_car:
+                            vehicle_Vehicle = new Car("",""," ");
+                            break;
+                        case R.id.radio_motorCycle:
+                            vehicle_Vehicle = new MotorCycle("",""," ");
+                            break;
+
+                    }
+                    Singleton.getObj().addIntoList(new
+                            FullTime(id_int, name_string, age_int,salary_int, bonus_int, vehicle_Vehicle ));
+                    Log.e("TAG", "full time added");
+                    Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
+                    // Intent mIntent = new Intent(FullTimeFragment.this, LoginActivity.class);
+                    //startActivity(mIntent);
+                    txtSalary.setText(null);
+                    txtBonus.setText(null);
+                    txtName.setText(null);
+                    txtAge.setText(null);
+                    txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
+                    radioVehicle.clearCheck();
+                }
