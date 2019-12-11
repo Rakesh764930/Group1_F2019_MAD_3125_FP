@@ -150,4 +150,28 @@ public class EmployeeDetailsFragment extends Fragment implements EmployeeDetails
 
     }
 
-   
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
+    }
+
+
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    @Override
+    public void employeeObject(Employee employee) {
+        this.employee=employee;
+    }
+
+
+    public interface OnFragmentInteractionListener {
+
+        void onFragmentInteraction(Uri uri);
+    }
+}
