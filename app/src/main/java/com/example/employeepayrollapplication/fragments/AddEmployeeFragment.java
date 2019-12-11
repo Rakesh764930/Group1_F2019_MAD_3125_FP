@@ -76,8 +76,27 @@ public class AddEmployeeFragment extends Fragment implements View.OnClickListene
                     layoutVehicle.setVisibility(View.GONE);
                 }
             }
-        });
+        });        this.employementtype.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+    {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            FragmentTransaction fragmentTransaction;
+            switch (checkedId)
+            {
+                case R.id.radio_parttime :
 
+                    if(AddEmployeeFragment.this.partTimeFragment  == null)
+                    { Log.e("TAG", "PartTime Radio selected");
+                        AddEmployeeFragment.this.partTimeFragment = new PartTimeFragment();
+                        AddEmployeeFragment.this.partTimeFragment.defaultViewsAddEmployeeFragment(id, text_name,text_age,text_date_of_birth, rgVehicle);
+                        Toast.makeText(AddEmployeeFragment.this.getContext(), "partTime", Toast.LENGTH_SHORT).show();
+                    }
+
+                    fragmentTransaction = AddEmployeeFragment.this.fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frame_layout_employment, AddEmployeeFragment.this.partTimeFragment);
+                    fragmentTransaction.commit();
+                    Toast.makeText(AddEmployeeFragment.this.getContext(), "parttime" , Toast.LENGTH_LONG).show();
+                    
     }
 
     @Override
