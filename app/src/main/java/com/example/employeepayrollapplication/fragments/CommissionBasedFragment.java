@@ -58,29 +58,6 @@ public class CommissionBasedFragment extends Fragment implements PartTimeDataInt
         btnAddEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if( !txtCommission.getText().toString().isEmpty()
-                        && !txtRatePerHour.getText().toString().isEmpty()
-                        && !txtNumberOfHours.getText().toString().isEmpty()
-                        && !txtName.getText().toString().isEmpty()
-                        &&  !txtAge.getText().toString().isEmpty()) {
-                    int commission_int = Integer.parseInt(txtCommission.getText().toString());
-                    int rate_int = Integer.parseInt(txtRatePerHour.getText().toString());
-                    float hours_float = Float.parseFloat(txtNumberOfHours.getText().toString());
-                    String name_string = txtName.getText().toString();
-                    String birthyear_int = txtDateOfBirth.getText().toString();
-                    int age_int = Integer.parseInt(txtAge.getText().toString());
-                    int id_int = Integer.parseInt(txtId.getText().toString());
-
-                    Vehicle vehicle_Vehicle = null;
-                    switch (rgVehicle.getCheckedRadioButtonId()) {
-                        case R.id.radio_car:
-                            vehicle_Vehicle = new Car("",""," ");
-                            break;
-                        case R.id.radio_motorCycle:
-                            vehicle_Vehicle = new MotorCycle("",""," ");
-                            break;
-
-                    }
 
                     Singleton.getObj().addIntoList(new CommissionBasedPartTime
                             (id_int, name_string, age_int, commission_int, rate_int, hours_float, vehicle_Vehicle));
