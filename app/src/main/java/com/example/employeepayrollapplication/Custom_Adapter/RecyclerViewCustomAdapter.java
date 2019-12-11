@@ -1,7 +1,6 @@
 package com.example.employeepayrollapplication.Custom_Adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,16 +59,15 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
             super(View);
             id = itemView.findViewById(R.id.emp_Id);
             name = itemView.findViewById(R.id.emp_name);
-         //   age = itemView.findViewById(R.id.emp_age);
+          age = itemView.findViewById(R.id.emp_age);
 
         }
 
         public  void bind(final Employee e , final SetCustomClickListener listener)
         {
-            Log.e("TAG", "adapter showing name");
             id.setText("Employee ID: " + e.getEmp_id());
             name.setText("Name : "+e.getName());
-          //  age.setText("Age : "+e.getAge());
+           age.setText("Age : "+e.getAge());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
