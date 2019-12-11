@@ -27,8 +27,8 @@ btnLogin.setOnClickListener(new View.OnClickListener() {
     public void onClick(View v) {
 
        if (edtUsername.getText().toString().trim().equals("user@employee.com") && edtPassword.getText().toString().trim().equals("s3cr3t")){
-            Intent intent=new Intent(LoginActivity.this, NavigationDrawerActivity.class);
-            startActivity(intent);
+          //  Intent intent=new Intent(LoginActivity.this, .class);
+            //startActivity(intent);
         }
         else{
             btnLogin.setAlpha(.5f);
