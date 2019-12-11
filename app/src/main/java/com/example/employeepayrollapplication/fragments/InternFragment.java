@@ -54,5 +54,32 @@ public class InternFragment extends Fragment  implements AddEmployeeInterface {
                 if(!schoolName.getText().toString().isEmpty() && !name.getText().toString().isEmpty()
                         &&  !age.getText().toString().isEmpty())
                 {
-                    
+
+                    int id_int = Integer.parseInt(id.getText().toString());
+                    String schoolname_string = schoolName.getText().toString();
+                    String birthyear_int = txtDateOfBirth.getText().toString();
+                    double internSalary_double = Double.parseDouble(internSalary.getText().toString());
+                    String name_string = name.getText().toString();
+                    int age_int = Integer.parseInt(age.getText().toString().substring(6));
+                    Vehicle vehicle_Vehicle = null;
+                    switch (vehicle.getCheckedRadioButtonId()) {
+                        case R.id.radio_car:
+                            vehicle_Vehicle = new Car("",""," ");
+                            break;
+                        case R.id.radio_motorCycle:
+                            vehicle_Vehicle = new MotorCycle("",""," ");
+                            break;
+
+                    }
+                    Singleton.getObj().addIntoList(new
+                            Intern(id_int, name_string, age_int,schoolname_string, vehicle_Vehicle ));
+                    Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
+                    schoolName.setText(null);
+                   // name.setText(null);
+                   // age.setText(null);
+                    //txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
+                   // vehicle.clearCheck();
+
+
+
                 }
