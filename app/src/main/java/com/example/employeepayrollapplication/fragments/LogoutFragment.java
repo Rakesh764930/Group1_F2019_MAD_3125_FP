@@ -15,8 +15,8 @@ public class LogoutFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-finish();
-
+//finish():- to go back to the login page
+        getActivity().finish();
         return null;
     }
 }
