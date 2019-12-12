@@ -22,7 +22,7 @@ public class HelpFragment extends Fragment {
     }
     public void showAlert(){
         androidx.appcompat.app.AlertDialog.Builder alertDailogBuilder = new androidx.appcompat.app.AlertDialog.Builder(getActivity());
-      alertDailogBuilder.setTitle("Contacts ");
+        alertDailogBuilder.setTitle("Contacts ");
         alertDailogBuilder.setMessage("Email: abc@payrollapp.ca\n" +
                 "Phone: (+1)123-456-7891");
         alertDailogBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

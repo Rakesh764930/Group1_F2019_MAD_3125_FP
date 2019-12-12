@@ -59,8 +59,6 @@ public class FullTimeFragment extends Fragment implements AddEmployeeInterface {
         super.onViewCreated(view, savedInstanceState);
         this.txtSalary = view.findViewById(R.id.text_salary);
         this.txtBonus = view.findViewById(R.id.text_bonus);
-
-
         this.btnAddFullTime = view.findViewById(R.id.btn_fulltime_employee);
         this.btnAddFullTime.setOnClickListener(new View.OnClickListener() {
             @Override

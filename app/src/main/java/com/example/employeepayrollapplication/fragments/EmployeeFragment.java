@@ -50,7 +50,7 @@ public class EmployeeFragment extends Fragment {
                 }
                 employeeDetailsFragment.employeeObject(e);
                 fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-//               // fragmentTransaction.
+//             fragmentTransaction.
                 fragmentTransaction.replace(R.id.nav_host_fragment, employeeDetailsFragment, "");
                 fragmentTransaction.commit();
                 //fragmentTransaction.addToBackStack(null);

@@ -34,8 +34,6 @@ public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
     CommissionBasedFragment commissionBasedFragment;
     FixedBasedPartTimeFragment fixedBasedFragment;
 
-
-
     private OnFragmentInteractionListener mListener;
 
     @Override
@@ -77,15 +75,12 @@ public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
             }
         });
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_part_time, container, false);
     }
-
-
     @Override
     public void defaultViewsAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
         this.id = id;
