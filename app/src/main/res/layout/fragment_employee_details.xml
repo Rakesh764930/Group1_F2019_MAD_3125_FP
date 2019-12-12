@@ -20,13 +20,13 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:background="#A2EDF5">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:background="#C9F5FA">
 
             <TextView
                 android:id="@+id/text_name_label"
