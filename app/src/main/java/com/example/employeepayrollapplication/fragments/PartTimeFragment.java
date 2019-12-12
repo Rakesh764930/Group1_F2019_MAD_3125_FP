@@ -85,3 +85,17 @@ public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_part_time, container, false);
     }
+    @Override
+    public void defaultViewsAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.dateOfBirth = date;
+        this.vehicle = vehicle;
+    }
+
+
+    public interface OnFragmentInteractionListener {
+        void onFragmentInteraction(Uri uri);
+    }
+}
