@@ -36,6 +36,7 @@ public class InternFragment extends Fragment  implements AddEmployeeInterface {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_intern, container, false);
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -75,11 +76,24 @@ public class InternFragment extends Fragment  implements AddEmployeeInterface {
                             Intern(id_int, name_string, age_int,schoolname_string, vehicle_Vehicle ));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     schoolName.setText(null);
-                   name.setText(null);
-                   age.setText(null);
+                    name.setText(null);
+                    age.setText(null);
                     txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
                     vehicle.clearCheck();
 
 
 
                 }
+                else
+                {
+
+                    Toast.makeText(getActivity(), "No field can be empty and unselected" , Toast.LENGTH_LONG).show();
+
+
+                }
+
+            }
+        });
+
+
+    }
