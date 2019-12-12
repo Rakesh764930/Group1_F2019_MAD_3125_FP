@@ -22,8 +22,6 @@ import com.example.employeepayrollapplication.fragments.FixedBasedPartTimeFragme
 
 
 public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
-
-
     TextView id;
     TextView name;
     TextView age;
