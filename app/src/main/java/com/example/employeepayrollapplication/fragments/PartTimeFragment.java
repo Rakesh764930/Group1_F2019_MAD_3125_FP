@@ -24,4 +24,22 @@ import com.example.employeepayrollapplication.fragments.FixedBasedPartTimeFragme
 public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
 
 
+    TextView id;
+    TextView name;
+    TextView age;
+    TextView dateOfBirth;
+    RadioGroup vehicle;
+    TextView ratePerHour;
+    TextView numberOfHours;
+    RadioGroup radioPartTime;
+    FragmentManager fragmentManager;
+    CommissionBasedFragment commissionBasedFragment;
+    FixedBasedPartTimeFragment fixedBasedFragment;
 
+
+
+    private OnFragmentInteractionListener mListener;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
