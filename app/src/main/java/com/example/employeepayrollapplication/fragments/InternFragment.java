@@ -97,3 +97,19 @@ public class InternFragment extends Fragment  implements AddEmployeeInterface {
 
 
     }
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+
+    @Override
+    public void defaultViewsAddEmployeeFragment(TextView id, TextView name, TextView age, TextView date, RadioGroup vehicle) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.txtDateOfBirth = date;
+        this.vehicle = vehicle;
+    }
+}
