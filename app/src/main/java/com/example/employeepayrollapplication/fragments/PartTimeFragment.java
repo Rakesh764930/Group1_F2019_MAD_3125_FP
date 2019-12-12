@@ -34,8 +34,6 @@ public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
     CommissionBasedFragment commissionBasedFragment;
     FixedBasedPartTimeFragment fixedBasedFragment;
 
-
-
     private OnFragmentInteractionListener mListener;
 
     @Override
