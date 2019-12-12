@@ -75,10 +75,10 @@ public class InternFragment extends Fragment  implements AddEmployeeInterface {
                             Intern(id_int, name_string, age_int,schoolname_string, vehicle_Vehicle ));
                     Toast.makeText(getActivity(), "Employee Added", Toast.LENGTH_LONG).show();
                     schoolName.setText(null);
-                   // name.setText(null);
-                   // age.setText(null);
-                    //txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
-                   // vehicle.clearCheck();
+                   name.setText(null);
+                   age.setText(null);
+                    txtDateOfBirth.setText("DateOfBirth : YYYY/MM/DD");
+                    vehicle.clearCheck();
 
 
 
