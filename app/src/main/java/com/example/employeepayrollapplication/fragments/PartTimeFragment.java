@@ -79,3 +79,9 @@ public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
             }
         });
     }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_part_time, container, false);
+    }
