@@ -43,3 +43,39 @@ public class PartTimeFragment extends Fragment implements AddEmployeeInterface {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        this.ratePerHour = view.findViewById(R.id.text_rateper_hour);
+        this.numberOfHours = view.findViewById(R.id.text_number_of_hours);
+        this.fragmentManager = getActivity().getSupportFragmentManager();
+        this.radioPartTime = getActivity().findViewById(R.id.radio_group_parttime_type);
+        this.radioPartTime.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                FragmentTransaction fragmentTransaction;
+                switch (checkedId)
+                {
+                    case R.id.radio_commission_parttime :
+                        if(PartTimeFragment.this.commissionBasedFragment == null)
+                        {
+                            PartTimeFragment.this.commissionBasedFragment = new CommissionBasedFragment();
+                            PartTimeFragment.this.commissionBasedFragment.defaultViewsPartTimeFragment(id,name,age, ratePerHour,numberOfHours, dateOfBirth, vehicle);
+                        }
+                        PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.commissionBasedFragment);
+                        fragmentTransaction.commit();
+                        break;
+
+                    case R.id.radio_fix_parttime :
+                        if(PartTimeFragment.this.fixedBasedFragment == null)
+                        {
+                            PartTimeFragment.this.fixedBasedFragment = new FixedBasedPartTimeFragment();
+                            PartTimeFragment.this.fixedBasedFragment.defaultViewsPartTimeFragment(id, name,age,ratePerHour, numberOfHours, dateOfBirth, vehicle);
+                        }
+                        PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction = PartTimeFragment.this.fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout_parttime_type, PartTimeFragment.this.fixedBasedFragment);
+                        fragmentTransaction.commit();
+                }
+            }
+        });
+    }
